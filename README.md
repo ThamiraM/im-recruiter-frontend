@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# IM Recruiter
+![image](https://user-images.githubusercontent.com/15544026/196873623-de2eaede-6d73-4408-a7e3-b27875498d56.png)
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
