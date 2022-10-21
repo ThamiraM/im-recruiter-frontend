@@ -1,3 +1,4 @@
+
 import { Button, Grid, Stack, TextField, Typography } from "@mui/material"
 import { useState, useEffect } from "react"
 import { useNavigate } from 'react-router-dom'
@@ -7,6 +8,7 @@ import { reset } from '../../features/auth/authSlice'
 import { register } from '../../features/auth/authActions'
 import MinimalLayout from "../layouts/MinimalLayout"
 import CSRFTokenComponent from "../common/csrf/CSRFTokenComponent"
+
 
 function Register() {
 
@@ -49,8 +51,8 @@ function Register() {
         if (password !== password2) {
             toast.error('Passwords do not match')
         } else {
-            const userData = { name, username: email, password, password2 }
-            dispatch(register(userData))
+           const userData = { name, username: email, password, password2 }
+           dispatch(register(userData))
         }
     }
 
