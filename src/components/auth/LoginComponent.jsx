@@ -26,7 +26,6 @@ function LoginComponent() {
             toast.error(message)
         }
 
-        // Redirect when logged in 
         if (isSuccess) {
             navigate('/dashboard')
         }
