@@ -1,9 +1,10 @@
 import MinimalLayout from "../../components/layouts/MinimalLayout"
+import LoginComponent from '../../components/auth/LoginComponent'
 
 const Login = () => {
     return <>
         <MinimalLayout>
-            <div>login</div>
+            <LoginComponent />
         </MinimalLayout>
     </>
 }

@@ -1,6 +1,8 @@
 import Login from './pages/auth/Login'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 function App() {
   return <>
@@ -14,6 +16,7 @@ function App() {
         <Route path='/master' element={<MasterIndex />} /> */}
       </Routes>
     </Router>
+    <ToastContainer position="top-center" theme='colored' style={{ width: '20%' }} />
   </>
 }
 
