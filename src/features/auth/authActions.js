@@ -1,7 +1,6 @@
 import authService from './authService'
 import { createAsyncThunk } from '@reduxjs/toolkit'
 
-
 export const register = createAsyncThunk(
     'auth/register',
     async (user, thunkAPI) => {

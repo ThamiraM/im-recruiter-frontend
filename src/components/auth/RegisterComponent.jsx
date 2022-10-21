@@ -8,6 +8,7 @@ import { register } from '../../features/auth/authActions'
 import MinimalLayout from "../layouts/MinimalLayout"
 import CSRFTokenComponent from "../common/csrf/CSRFTokenComponent"
 
+
 function Register() {
 
     const [formData, setFormData] = useState({
@@ -49,8 +50,8 @@ function Register() {
         if (password !== password2) {
             toast.error('Passwords do not match')
         } else {
-            const userData = { name, username: email, password, password2 }
-            dispatch(register(userData))
+           const userData = { name, username: email, password, password2 }
+           dispatch(register(userData))
         }
     }
 
@@ -63,7 +64,6 @@ function Register() {
                 alignItems="center"
                 justifyContent="center"
                 style={{ minHeight: '100vh' }}
-
             >
 
                 <form onSubmit={onSubmit}>
@@ -72,6 +72,7 @@ function Register() {
                         <Typography gutterBottom variant="h4" component="div" sx={{ mb: 4 }}>
                             Register User
                         </Typography>
+
                         <TextField id="name" required={true} name="name" label="Name" value={name} variant="outlined" onChange={onChange} />
                         <TextField id="email" required={true} name="email" label="Email" type="email" value={email} variant="outlined" onChange={onChange} />
                         <TextField id="password" required={true} name="password" label="Password" type="password" value={password} variant="outlined" onChange={onChange} />
