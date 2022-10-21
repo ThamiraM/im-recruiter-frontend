@@ -55,15 +55,16 @@ function LoginComponent() {
             justifyContent="center"
             style={{ minHeight: '100vh' }}
         > 
-            <Typography variant="h3" component="div" sx={{ my: 5 }}>
-                Let's get started
-            </Typography>
+
             <form onSubmit={onSubmit}>
                 <CSRFTokenComponent />
-                <Stack spacing={3} sx={{ width: { lg: '25vw', md: '100vw' } }} >
+                <Stack spacing={3} sx={{ width: { lg: '40vw', md: '100vw', marginTop: '10%' }, backgroundColor: '#ffff', p: 3, borderRadius: '10px' }} >
+                    <Typography variant="h3" component="div" sx={{ my: 5 }}>
+                        Login
+                    </Typography>
                     <TextField id="email" name="email" label="Email" type="email" value={email} onChange={onChange} variant="outlined" />
                     <TextField id="password" name="password" label="Password" type="password" value={password} onChange={onChange} variant="outlined" />
-                    <Button variant="contained" sx={{ p: 2, my: 6 }} type='submit'>Login</Button>
+                    <Button variant="contained" sx={{ p: 2, my: 6, backgroundColor: '#4c1d95' }} type='submit'>Login</Button>
                 </Stack>
             </form>
         </Grid>

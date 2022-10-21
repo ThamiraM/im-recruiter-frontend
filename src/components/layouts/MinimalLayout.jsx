@@ -27,7 +27,7 @@ function MinimalLayout({ children }) {
                 <Grid item xs={6}>
                     <SliderComponent />
                 </Grid>
-                <Grid item xs={6}>
+            <Grid item xs={6} sx={{ backgroundColor: '#ede9fe' }}>
                     {children}
                 </Grid>
         </Grid>
