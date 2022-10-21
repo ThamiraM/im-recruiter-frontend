@@ -65,14 +65,12 @@ function Register() {
                 justifyContent="center"
                 style={{ minHeight: '100vh' }}
             >
-
                 <form onSubmit={onSubmit}>
                     <CSRFTokenComponent />
                     <Stack spacing={3} sx={{ width: { lg: '40vw', md: '100vw', marginTop: '20%' }, backgroundColor: '#ffff', p: 3, borderRadius: '10px' }}>
                         <Typography gutterBottom variant="h4" component="div" sx={{ mb: 4 }}>
                             Register User
                         </Typography>
-
                         <TextField id="name" required={true} name="name" label="Name" value={name} variant="outlined" onChange={onChange} />
                         <TextField id="email" required={true} name="email" label="Email" type="email" value={email} variant="outlined" onChange={onChange} />
                         <TextField id="password" required={true} name="password" label="Password" type="password" value={password} variant="outlined" onChange={onChange} />

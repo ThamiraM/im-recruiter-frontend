@@ -1,6 +1,9 @@
 # IM Recruiter
 ![image](https://user-images.githubusercontent.com/15544026/197135955-6486262c-da04-4205-971e-aa3c8b2d19c3.png)
 
+![image](https://user-images.githubusercontent.com/15544026/197158204-7bcbf815-093b-4d7b-b5ea-a2446aa0b813.png)
+
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
