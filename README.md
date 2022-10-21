@@ -1,7 +1,7 @@
 # IM Recruiter
-![image](https://user-images.githubusercontent.com/15544026/197135955-6486262c-da04-4205-971e-aa3c8b2d19c3.png)
+![image](https://user-images.githubusercontent.com/15544026/197164803-5d737869-690a-497d-92f3-fd7cbd0d9658.png)
 
-![image](https://user-images.githubusercontent.com/15544026/197158204-7bcbf815-093b-4d7b-b5ea-a2446aa0b813.png)
+![image](https://user-images.githubusercontent.com/15544026/197164866-974b31e4-a847-429c-b115-cd74a094d399.png)
 
 
 
