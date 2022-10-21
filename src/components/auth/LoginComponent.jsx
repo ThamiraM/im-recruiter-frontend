@@ -1,4 +1,4 @@
-import { Button, Grid, Stack, TextField, Typography } from '@mui/material'
+import { Alert, Button, Grid, Stack, TextField, Typography } from '@mui/material'
 import React, { useState, useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { reset } from '../../features/auth/authSlice'
@@ -55,7 +55,7 @@ function LoginComponent() {
             alignItems="center"
             justifyContent="center"
             style={{ minHeight: '100vh' }}
-        >
+        > 
             <Typography variant="h3" component="div" sx={{ my: 5 }}>
                 Let's get started
             </Typography>
