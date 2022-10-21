@@ -1,0 +1,24 @@
+.header {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    background-color: #4c1d95;
+    padding: 2em 2em;
+}
+
+.logo {
+    font-weight: 400;
+    font-size: 1.5em;
+    letter-spacing: 0.25em;
+    cursor: pointer;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}

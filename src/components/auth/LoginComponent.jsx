@@ -1,10 +1,11 @@
 import { Button, Grid, Stack, TextField, Typography } from '@mui/material'
 import React, { useState, useEffect } from 'react'
-import MinimalLayout from '../layouts/MinimalLayout'
 import { useSelector, useDispatch } from 'react-redux'
-import { login, reset } from '../../features/auth/authSlice'
+import { reset } from '../../features/auth/authSlice'
+import { login } from '../../features/auth/authActions'
 import { toast } from 'react-toastify'
 import { useNavigate } from 'react-router-dom'
+import CSRFTokenComponent from '../common/csrf/CSRFTokenComponent'
 
 function LoginComponent() {
 
@@ -15,24 +16,23 @@ function LoginComponent() {
 
     const { email, password } = formData
 
-    // const dispatch = useDispatch()
-    // const navigate = useNavigate()
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
 
-    // const { user, isLoading, isError, isSuccess, message } = useSelector(state => state.auth)
+    const { user, isError, isSuccess, message } = useSelector(state => state.auth)
 
+    useEffect(() => {
+        if (isError) {
+            toast.error(message)
+        }
 
-    // useEffect(() => {
-    //     if (isError) {
-    //         toast.error(message)
-    //     }
+        // Redirect when logged in 
+        if (isSuccess) {
+            navigate('/dashboard')
+        }
 
-    //     // Redirect when logged in 
-    //     if (isSuccess) {
-    //         navigate('/dashboard')
-    //     }
-
-    //     dispatch(reset())
-    // }, [isError, isSuccess, user, message, navigate, dispatch])
+        dispatch(reset())
+    }, [isError, isSuccess, user, message, navigate, dispatch])
 
     const onChange = (e) => {
         setFormData((prevState) => ({
@@ -42,9 +42,9 @@ function LoginComponent() {
     }
 
     const onSubmit = (e) => {
-        // e.preventDefault()
-        // const userData = { email, password }
-        // dispatch(login(userData))
+        e.preventDefault()
+        const userData = { username: email, password }
+        dispatch(login(userData))
     }
 
     return <>
@@ -56,11 +56,12 @@ function LoginComponent() {
             justifyContent="center"
             style={{ minHeight: '100vh' }}
         >
-            <Typography variant="h5" component="div" sx={{ my: 6 }}>
-                Login to your Account
+            <Typography variant="h3" component="div" sx={{ my: 5 }}>
+                Let's get started
             </Typography>
             <form onSubmit={onSubmit}>
-                <Stack spacing={3} sx={{ width: { lg: '30vw', md: '100vw' } }} >
+                <CSRFTokenComponent />
+                <Stack spacing={3} sx={{ width: { lg: '25vw', md: '100vw' } }} >
                     <TextField id="email" name="email" label="Email" type="email" value={email} onChange={onChange} variant="outlined" />
                     <TextField id="password" name="password" label="Password" type="password" value={password} onChange={onChange} variant="outlined" />
                     <Button variant="contained" sx={{ p: 2, my: 6 }} type='submit'>Login</Button>
@@ -68,8 +69,6 @@ function LoginComponent() {
             </form>
         </Grid>
     </>
-
-
 }
 
 export default LoginComponent
