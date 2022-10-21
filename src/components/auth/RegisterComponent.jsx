@@ -1,4 +1,3 @@
-
 import { Button, Grid, Stack, TextField, Typography } from "@mui/material"
 import { useState, useEffect } from "react"
 import { useNavigate } from 'react-router-dom'
@@ -66,17 +65,19 @@ function Register() {
                 justifyContent="center"
                 style={{ minHeight: '100vh' }}
             >
-                <Typography gutterBottom variant="h4" component="div" sx={{ mb: 4 }}>
-                    Register User
-                </Typography>
+
                 <form onSubmit={onSubmit}>
                     <CSRFTokenComponent />
-                    <Stack spacing={3} sx={{ width: { sm: '100vw', md: '30vw' } }}>
+                    <Stack spacing={3} sx={{ width: { lg: '40vw', md: '100vw', marginTop: '20%' }, backgroundColor: '#ffff', p: 3, borderRadius: '10px' }}>
+                        <Typography gutterBottom variant="h4" component="div" sx={{ mb: 4 }}>
+                            Register User
+                        </Typography>
+
                         <TextField id="name" required={true} name="name" label="Name" value={name} variant="outlined" onChange={onChange} />
                         <TextField id="email" required={true} name="email" label="Email" type="email" value={email} variant="outlined" onChange={onChange} />
                         <TextField id="password" required={true} name="password" label="Password" type="password" value={password} variant="outlined" onChange={onChange} />
                         <TextField id="password2" required={true} name="password2" label="Confirm Password" type="password" value={password2} variant="outlined" onChange={onChange} />
-                        <Button variant="contained" type='submit' sx={{ p: 2 }} >Register</Button>
+                        <Button variant="contained" type='submit' sx={{ p: 2, backgroundColor: '#4c1d95' }} >Register</Button>
                     </Stack>
                 </form>
             </Grid>
